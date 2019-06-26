@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main (void)
+{
+
+	int arr [5];
+	int sum = 0;
+	int max = 0;
+	int min = 100;
+
+
+	printf("다섯개의 정수를 입력해 주세요");
+	for(int i = 0; i < 5; i++){
+		scanf("%d", &arr[i]);
+		sum += arr[i];
+	}
+
+	for(int i = 0; i < 5; i++){
+		if( max < arr[i])
+		max = arr[i];
+	}
+
+	for(int i = 0; i < 5; i++){
+		if(min > arr[i])
+			min = arr[i];
+	}
+
+	printf("입력된 정수 중에서 최댓값: %d\n", max);
+	printf("입력된 정수 중에서 최솟값: %d\n", min);
+	printf("입력된 정수의 총 합 : %d\n", sum);
+
+}
