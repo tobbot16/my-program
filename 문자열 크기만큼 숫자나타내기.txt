@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main (void)
+{
+	char word [100];
+	int sum = 0;
+	scanf("%s", &word);
+
+	while(word[sum] != '\0')
+		sum++;
+
+	printf("\n");
+	printf("%d", sum);
+
+	return 0;
+}
