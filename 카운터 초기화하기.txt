@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int num1;
+
+	printf("카운터의 초기값을 입력하시오");
+	scanf_s("%d", &num1);
+
+	for (int i = num1; i > 0; i--)
+		printf("%d ", i);
+
+
+
+}
