@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int i = 10;
+	int* p;	//int *p = NULL;로 해도 상관이 없다.
+	p = &i;
+
+	printf("i의 값: %d\n", *p);
+	
+	*p = 20;
+	printf("i의 값: %d\n", i);
+
+	i = 30;
+	printf("i의 값: %d", *p);
+}

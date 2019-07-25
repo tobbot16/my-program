@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int a = 10, b = 20;
+	int tot;
+	double avg;
+	int* pa = NULL;
+	int* pb = NULL;
+	int* ptot = NULL;
+	double* pavg = NULL;
+	pa = &a;
+	pb = &b;
+	ptot = &tot;
+	pavg = &avg;
+	*ptot = *pa + *pb;
+	*pavg = *ptot / 2.0;
+
+	printf("*ptot = %d\n*pavg = %lf", *ptot, *pavg);
+
+}

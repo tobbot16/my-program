@@ -1,0 +1,22 @@
+#include <stdio.h>
+void get_sum_diff(int x, int y, int* p_sum, int* p_diff) {
+	*p_sum = *&x + *&y;
+	*p_diff = *&x - *&y;
+	printf("원소들의 합 = %d", *p_sum);
+	printf("원소들의 차 = %d", *p_diff);
+}
+
+int main(void) {
+	int x, y, sum, diff;
+	scanf_s("%d", &x);
+	scanf_s("%d", &y);
+
+	int* px = NULL, * py = NULL, *p_sum = NULL, *p_diff = NULL;
+	px = &x;
+	py = &y;
+	p_sum = &sum;
+	p_diff = &diff;
+//	*p_sum = *px + *py;
+
+	get_sum_diff(x, y, p_sum, p_diff);
+}

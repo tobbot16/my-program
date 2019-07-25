@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+void array_fill(int* A, int size) {
+	int i;
+	for (i = 0; i < size; i++) {
+		A[i] = rand();
+		printf("%d ", A[i]);
+	}
+
+	srand(time(NULL));
+}
+int main(void) {
+	int arr[10];
+	array_fill(arr, 10);
+}
