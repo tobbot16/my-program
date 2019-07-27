@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define SIZE 10
+int search(int arr[], int value);
+
+int main(void) {
+	int arr[SIZE], find_num, result, num = 0;
+	srand(time(NULL));
+	for (int i = 0; i < SIZE; i++)
+		arr[i] = rand() % 100;
+	printf("배열의 값: [");
+	for (int i = 0; i < SIZE; i++)
+		printf("%d ", arr[i]);
+	printf("]\n");
+	printf("찾을 숫자를 입력하세요 : ");
+	scanf_s("%d", &find_num);
+	result = search(arr, find_num);
+
+	if (result == -1)
+		printf("배열에 존재하지 않는 숫자입니다.");
+	else {
+		for (num = 0; num < SIZE; num++) {
+			if (result == arr[num])
+			break;
+		}
+		printf("%d는 %d번째 자리에 있습니다.", result, ++num);
+	}
+
+}
+int search(int arr[], int value) {
+	int boo = 0, find_value = 0;
+	for (int i = 0; i < SIZE; i++)
+		if (arr[i] == value) {
+			boo++;
+			find_value = arr[i];
+		}
+	if (boo == 0)
+		return -1;
+	if (boo > 0)
+		return find_value;
+}

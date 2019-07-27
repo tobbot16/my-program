@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define SIZE 10
+void _sum(int* arr, int* sum) {
+	for (int i = 0; i < SIZE; i++)
+		*sum += *(arr + i);
+	printf("√—«’ = %d\n", *sum);
+}
+void _avg(int* sum, float* avg) {
+	*avg = (double)*sum / (double)SIZE;
+	printf("∆Ú±’ = %lf\n", *avg);
+}
+void _min(int* arr, int* min) {
+	for (int i = 0; i < SIZE; i++)
+		if (*(arr + i) < *min)
+			*min = *(arr + i);
+			printf("√÷º“ = %d\n", *min);
+}
+void _max(int* arr, int* max) {
+	for (int i = 0; i < SIZE; i++)
+		if (*(arr + i) > * max)
+			* max = *(arr + i);
+	printf("√÷¥Î = %d", *max);
+}
+
+
+int main(void) {
+	int num, sum, avg, min, max;
+	sum = 0, avg = 0, min = 10, max = 0;
+	int arr[SIZE];
+	srand(time(NULL));
+	for (int i = 0; i < SIZE; i++) {
+		*(arr + i) = rand() % 9;
+		printf("%d ", *(arr + i));
+	}
+	printf("\n");
+	_sum(arr, &sum);
+	_avg(&sum, &avg);
+	_min(arr, &min);
+	_max(arr, &max);
+}

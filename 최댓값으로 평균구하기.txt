@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(void) {
+	double num, arr[1000], max = 0;
+	double result, sum = 0;
+	scanf_s("%lf", &num);
+	for (int i = 0; i < num; i++)
+		scanf_s("%lf", &arr[i]);
+	for (int i = 0; i < num; i++)
+		if (arr[i] > max)
+			max = arr[i];
+	for (int i = 0; i < num; i++) {
+		sum += arr[i] / max * 100;
+	}
+	result = sum / num;
+	printf("%.2f", result);
+}

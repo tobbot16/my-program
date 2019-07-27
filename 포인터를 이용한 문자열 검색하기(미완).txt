@@ -1,0 +1,23 @@
+#include<stdio.h>
+int compare(char* A, char* B);
+int main(void) {
+	char str1[10];
+	char str2[10];
+
+	printf("첫번쨰 문자열을 입력하세요 =");
+	scanf_s("%s", str1);
+	printf("두번째 문자열을 입력하세요 =");
+	scanf_s("%s", str2);
+
+	if (compare(&str1, &str2) == 0)
+		printf("두 문자열은 같습니다");
+	else if(compare(&str1, &str2) == -1)
+		printf("두 문자열은 다릅니다.");
+}
+
+int compare(char* A, char* B) {
+	if (strcmp(*A, *B) == 0)
+	return 0;
+	else
+		return -1;
+}

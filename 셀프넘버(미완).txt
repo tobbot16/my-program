@@ -1,0 +1,43 @@
+#include<stdio.h>
+//33 + 3 + 3 = 39;
+int main(void) {
+	int num, result = 1;
+/*	for (int i = 0; i < 100; i++) {
+		result = self(i);
+		for (int j = 0; j < 100; j++)
+			if (result != j) {
+				printf("%d\n", result);
+				break;
+			}
+	}
+*/
+for (int i = 1; i < 100; i++){
+	printf("%d\n", self(i));
+	
+}
+
+//	scanf_s("%d", &num);
+//result = zero(num)/ 10;
+//printf("%d", result);
+}
+int zero(int n) {
+	for(int i = 1; i <= n; i *= 10)
+		if (n / i == 0)
+		{
+			i /= 10;
+			break;
+		}
+}
+
+int self(int n) {
+	int result;
+	result = n;
+while (n / (zero(n) / 10) <= 0)
+{
+	result = n + (n /(zero(n) / 10));
+	return self(n / (zero(n) / 10));
+}
+
+
+
+}
