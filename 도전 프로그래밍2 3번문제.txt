@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+	int arr[10], k = 0, arr1[10], arr2[10], j = 0;
+	for (int i = 0; i < 10; i++) {
+		printf("입력: ");
+		scanf_s("%d", &arr[i]);
+	}
+	for (int i = 0; i < 10; i++) {
+		if (arr[i] % 2 == 0) {
+			arr1[k] = arr[i];
+			k++;
+		}
+		if (arr[i] % 2 == 1) {
+			arr2[j] = arr[i];
+			j++;
+		}
+	}
+	printf("배열 요소의 출력: ");
+	for (int i = 0; i < j; i++)
+		printf("%d ", arr2[i]);
+	for (int i = k-1; i >= 0; i--)
+		printf("%d ", arr1[i]);
+}
